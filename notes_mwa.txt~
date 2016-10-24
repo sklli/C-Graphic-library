@@ -1,0 +1,55 @@
+fourni :
+
+accès aux pixels
+dessin de texte
+dessin de primitives graphiques
+reception des actions sur le clavier et la souris
+.h de toutes les fonctions
+programmes de test de notre implémentation
+
+A faire :
+configuration et dessin des interacteurs (boutons, fenetres)
+gestion de la géometrie des interacteurs (=widget) de l'écran (changement de
+taille de fenetre par exemple)
+gestion des evenements de l'utilisateur (après actions sur clavier et
+souris)
+
+
+prog evenementielle :
+ prog en attente, déclenche un traitant quand un
+évenement est détecté
+boucle principale à 4 phases : attente d'un event (infini), recherche de
+ l'interacteur concerné, appel du traitant, maj de
+ l'affichage. Précédé d'initialisation des interacteurs, des
+ attributs, et leur affichage.
+
+libeibase.a : fourni
+initialisation de la fenetre graphique
+gestion des surfaces de dessin (zones mémoire)
+dessins élémentaires
+attente des évenements 
+mesure du temps
+
+interacteurs (widgets): 
+organisés hiérarchiquement en arbre : 1 parent, plusieurs fils
+racine = fenetre systeme
+les fils sont ordonnés, pour déterminer leur visibilité (qui chevauche
+qui). Un fils ne peut être dessiné qu'a l'intérieur de son parent
+classes : boutons, labels, fenetres, etc. SDD stockant les attributs
+de tout interacteur de la classe + pointeurs vers les fonctions
+spécifiques de la classe
+
+gestionnaire d'évenements : enregistre les actions clavier/souris, et
+déclenche les evenements correspondants (appels de fonction par ex)
+Picking : à partir des données de la souis, le gestionnaire choisi
+l'interacteur concerné => offscreen de picking = interface simplifiée
+pour reconnaitre où la souris est par rapport aux interacteurs =
+HITBOX
+
+
+
+
+
+
+
+

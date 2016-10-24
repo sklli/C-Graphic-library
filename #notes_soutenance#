@@ -1,0 +1,29 @@
+
+
+état du programme :
+frame OK
+button : relief, changement d'apparence, image, texte, appel à des callback
+toplevel : bordure, titre, peut être bougé (pas fluide), et "redimensionner" (pas fini). Le bouton de fermeture segfault (problème sur widget_detroy)
+puzzle et minesweeper : les images ne s'affichent pas (ROI size)
+
+new_types
+listes globales simplement chainées
+relief
+ei_draw_widget
+
+
+répartition du travail :
+-events, button, widget, application
+-frame, toplevel, relief, widget_class
+-geometry_manager, draw_widget, placer
+
+difficultés : redimension (min_size), rafraichissement écran, bouton fermeture qui ne s'affiche pas dans toplevel
+temps perdu sur ei_draw (écriture de toutes les fonctions)
+erreurs mémoires tout le projet
+parti sur une mauvaise structure (pointeur pour chaque champ =>on a mis les champs communs à widget pou faciliter le polymorphisme).
+
+a refaire : corriger erreurs mémoire dès le début pour ne pas trainer des bugs cachés
+
+
+new_types : fichier commun avec les types nécessaires à tout le monde
+ 

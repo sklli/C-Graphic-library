@@ -1,0 +1,45 @@
+. Introduction
+
+Au > Présentation, état du programme (2/3 phrases sur ce qui marche, ce qui ne marche pas). [1 min]
+
+. Spécificités de notre bibliothèque
+We > ei_draw_widget [1 min]
+An > Listes globales, fonctions de new_types. [1 min]
+
+. Répartition du travail
+
+Au > Implémentation des classes frame & toplevel [30 s]
+   > Widgetclass [30 s]
+   > Relief [1 min]
+
+We > Placer [1 min]
+
+An > Implémentation de button [20 s]
+   > Widget (Offscreen non utilisé) [1 min]
+   > Events (Callback, ei_bind...) [1 min]
+   > Application [30 sec]
+
+. Difficultés
+
+Au > Tentative d'implémentation du bouton de fermeture, on a finalement opté
+     pour une simple zone localisée. [2 min]
+
+An > Perte de temps sur ei_draw. [10 s]
+   > Déplacement/Redimensionnement non optimal (rafraîchissement écran étrange
+     malgré le clipper diminué, l'utilisation des lock/unlock/update, min_size
+     non accessible car modifié à un autre endroit (localisé)). [1 min]
+
+We > Changement sur la fin du projet de la majorité des structures : Les
+     pointeurs ont démultiplié nos problèmes, on a décidé de changer. [1 min]
+
+. Bilan & Tests
+
+Au > Mitigé, il aurait fallu utiliser activement Valgrind dès le début, ne pas
+     copier les fonctions configure pour le type des paramètres et se demander
+     pourquoi un pointeur. A noter que sur la fin, on a quand même réussi à
+     obtenir 0 erreurs sur Valgrind, mais en choisissant de ne pas aller plus
+     loin dans les tests (arrêt à hello_world). [2 min]
+
+An & We > Tests (Frame, Button, Hello, + leurs modifications).
+
++15 min

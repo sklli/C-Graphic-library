@@ -1,0 +1,7 @@
+A.2 
+
+état du programme :
+frame OK
+button : relief, changement d'apparence, image, texte, appel à des callback
+toplevel : bordure, titre, peut être bougé (pas fluide), et redimensionner (pas fini). Le bouton de fermeture segfault (problème sur widget_detroy)
+
